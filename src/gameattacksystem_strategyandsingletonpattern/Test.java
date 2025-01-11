@@ -1,4 +1,4 @@
-package gameattacksystem_strategypattern;
+package gameattacksystem_strategyandsingletonpattern;
 
 public class Test {
     
@@ -13,6 +13,10 @@ public class Test {
     public static void main(String[] args) {
         Test test = new Test();
         
+        //singleton quest manager handles quests
+        KillQuest killQuest = new KillQuest();
+        QuestManager.getInstance().addActiveQuest(killQuest);
+        
         test.player.attack(test.enemy);
         test.enemy.attack(test.player);
 
@@ -22,6 +26,7 @@ public class Test {
         test.enemy.attack(test.player);      
 
         //job done, player goes back to fists
+        QuestManager.getInstance().removeActiveQuest(killQuest);
         test.player.equip(test.unarmed);
     }
 }

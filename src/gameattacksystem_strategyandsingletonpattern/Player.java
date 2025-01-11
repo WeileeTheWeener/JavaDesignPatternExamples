@@ -1,4 +1,4 @@
-package gameattacksystem_strategypattern;
+package gameattacksystem_strategyandsingletonpattern;
 
 public class Player implements Attacker, Damageable, Character {
     

@@ -36,7 +36,7 @@ public class MuscleGainFactory extends AbstractExercisePlanFactory {
 	            exerciseDay.setName("Day " + (i + 1));
 	            exerciseDays.add(exerciseDay);
 	        }
-	        System.out.println("Make sure to choose appropriate weight and get close to failure with proper form.");
+	        System.out.println("Make sure to choose appropriate weight for given rep and get close to failure with proper form.");
 	        
 	    } catch (IOException e) {
 	        e.printStackTrace();

@@ -1,4 +1,4 @@
-package gameattacksystem_strategypattern;
+package gameattacksystem_strategyandsingletonpattern;
 
 public class Bow implements Attacker, Equipable
 {
