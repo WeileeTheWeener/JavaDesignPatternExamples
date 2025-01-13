@@ -11,6 +11,9 @@ public class Unarmed implements Attacker,Equipable
 
     @Override
     public void attack(Damageable target) {
+    	
+    	if(target == null) return;
+    	
         System.out.println("Attacking with fists for " + damage + " damage.");
         target.takeDamage(damage);
     }
@@ -18,6 +21,8 @@ public class Unarmed implements Attacker,Equipable
     @Override
     public void equip(Character character)
     {
+    	if(character == null) return;
+    	
         System.out.println(character.getName() +" equipped fists!");
     }
 }

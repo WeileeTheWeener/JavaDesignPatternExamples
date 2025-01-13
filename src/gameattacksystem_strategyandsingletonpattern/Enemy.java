@@ -16,6 +16,9 @@ public class Enemy implements Attacker, Damageable, Character {
     
     @Override
     public void attack(Damageable target) {
+    	
+    	if(target == null) return;
+    	
         if(health > 0) {
             System.out.println("Enemy " + name + " attacks to " + target);
             attacker.attack(target);

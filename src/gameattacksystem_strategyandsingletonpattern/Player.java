@@ -16,7 +16,10 @@ public class Player implements Attacker, Damageable, Character {
 
     @Override
     public void attack(Damageable target) {
-        if(health > 0) {
+        
+    	if(target == null) return;
+    	
+    	if(health > 0) {
             System.out.println("Player " + name + " attacks to " + target);
             attacker.attack(target);
         }  
@@ -39,6 +42,8 @@ public class Player implements Attacker, Damageable, Character {
 
     public void equip(Attacker attacker) {
         
+    	if(attacker == null) return;
+    	
         if(attacker instanceof Equipable) {
             ((Equipable) attacker).equip(this);
             this.attacker = attacker;

@@ -13,6 +13,9 @@ public class Sword implements Attacker,Equipable
 
     @Override
     public void attack(Damageable target) {
+    	
+    	if(target == null) return;
+    	
         System.out.println("Sword " + name + " does " + damage + " damage.");
         target.takeDamage(damage);
     }
@@ -20,6 +23,8 @@ public class Sword implements Attacker,Equipable
     @Override
     public void equip(Character character)
     {
+    	if(character == null) return;
+    	
         System.out.println(character.getName() +" equipped a sword!");
     }
 }
